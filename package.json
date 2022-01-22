@@ -1,0 +1,27 @@
+{
+  "name": "web-component",
+  "version": "1.0.0",
+  "description": "Web Component using Typescript and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack serve",
+    "build": "webpack build --mode=production"
+  },
+  "author": "jihogrammer@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.10",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0",
+    "to-string-loader": "^1.2.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
+}

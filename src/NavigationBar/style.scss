@@ -1,0 +1,50 @@
+$breakpoint-desktop: 900px;
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+.wrapper {
+
+  background-color: #ffbd00;
+
+  nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px;
+
+    section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  ham-burger {
+
+    @include desktop {
+      display: none;
+    }
+
+  }
+
+  menu-list {
+
+    &[data-toggle] {
+      display: none;
+    }
+
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+}

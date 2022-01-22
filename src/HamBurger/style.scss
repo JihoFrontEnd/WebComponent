@@ -1,0 +1,34 @@
+$size: 20px;
+$color: #EC1C24;
+
+h1 {
+  color: $color;
+}
+
+section {
+  cursor: pointer;
+  width: $size;
+  height: $size;
+  margin: 10px 10px;
+}
+
+article {
+  background-color: $color;
+  margin: 4px 0;
+  width: $size;
+  height: 3px;
+  border-radius: 3px;
+  position: relative;
+}
+
+article[data-0] {
+  -webkit-transform: translateY(7px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
+}
+article[data-1] {
+  opacity : 0;
+}
+article[data-2] {
+  -webkit-transform: translateY(-7px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
+}

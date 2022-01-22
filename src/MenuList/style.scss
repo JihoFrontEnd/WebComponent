@@ -1,0 +1,51 @@
+$breakpoint-desktop: 900px;
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  // li 태그의 width 값이 content 크기로 변하는 것을 방지하기 위해 align-items는 사용하지 않음
+  // align-items: center;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  li {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+
+    @include desktop {
+      &:hover {
+        background-color: inherit;
+      }
+    }
+
+    a {
+      width: max-content;
+
+      &, &:visited, &:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:hover {
+        color: #ea1e26;
+      }
+    }
+  }
+}
